@@ -1,7 +1,7 @@
 import React from "react";
 import "./layout.scss";
 import { Link } from "gatsby";
-import Logo from "../icons/logo";
+import LogoWhite from "../icons/logowhite";
 
 const Layout = ({ children }) => (
   <div className="App">
@@ -12,12 +12,17 @@ const Layout = ({ children }) => (
           <Link to="/how">How</Link>
           <Link to="/why">Why</Link>
         </div>
-        <div className="content">
-          {children}
-        </div>
+        <div className="content">{children}</div>
       </div>
       <div className="right-image">
-        <Logo className="demusic-logo" fill="#000" width={100} height={100}/>
+        <div className="demusic-logo-container">
+          <LogoWhite
+            className="demusic-logo"
+            fill="#000"
+            width={140}
+            opacity="80%"
+          />
+        </div>
       </div>
     </div>
   </div>
