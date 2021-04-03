@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: #ee5151;
+
+  .left-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .header {
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: small;
+      color: white;
+
+      > a {
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        display: inline-block;
+        padding: 5px 20px 15px;
+        position: relative;
+
+        &:link,
+        &:visited,
+        &:active {
+          color: white;
+        }
+
+        &::after {
+          background: none repeat scroll 0 0 transparent;
+          bottom: 0;
+          content: "";
+          display: block;
+          height: 2px;
+          left: 50%;
+          position: absolute;
+          background: #fff;
+          transition: width 0.3s ease 0s, left 0.3s ease 0s;
+          width: 0;
+        }
+
+        &:hover::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+
+    .content {
+      flex: 1;
+      padding: 25px;
+      color: white;
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+
+      p.title {
+        font-weight: bold;
+        font-size: 36px;
+        padding-bottom: 10px;
+      }
+
+      .text {
+       font-size: 22px; 
+      }
+    }
+  }
+
+  .right-image {
+    flex: 1;
+    background-image: url("../../images/girlradio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .demusic-logo {
+      
+    }
+  }
+}
+
+@media screen and (max-height: 300px) {
+  .header > a {
+    margin-top: 40px;
+  }
+}
+
+.text {
+  z-index: 2;
+}
