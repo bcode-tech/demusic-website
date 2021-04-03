@@ -2,9 +2,11 @@ import React from "react";
 import "./layout.scss";
 import { Link } from "gatsby";
 import LogoWhite from "../icons/logowhite";
+import Seo from "../SEO/Seo";
 
 const Layout = ({ children }) => (
   <div className="App">
+    <Seo title="DeMusic - Where music meets blockchain"/>
     <div className="container">
       <div className="left-panel">
         <div className="header">
