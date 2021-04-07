@@ -1,0 +1,94 @@
+.drawer-content {
+    .chakra-modal__content-container {
+        z-index: 1;
+
+        .chakra-modal__content {
+            width: 70% !important;
+            max-width: 35rem;
+            min-width: 20rem;
+            padding: 0 2em;
+            background: $white;
+            box-sizing: border-box;
+
+            .chakra-modal__header {
+                flex: 0 1 0%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 5rem;
+                padding: 2.25rem 0;
+                box-sizing: border-box;
+
+                .chakra-modal__close-btn {
+                    margin-left: auto;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                }
+            }
+
+            .chakra-modal__body {
+                flex: 1 1 0%;
+
+                .list {
+                    .list-item {
+                        display: flex;
+                        justify-content: center;
+                        margin: 2em 0;
+
+                        .button {
+                            padding: 0.75em 1.25em;
+                            border: none;
+                            border-radius: 0.625rem;
+                            background: $accent-color;
+                            color: $white;
+                            transition: background 250ms ease;
+                            cursor: pointer;
+
+                            &:hover,
+                            &:focus {
+                                background: mix($black, $accent-color, 10%);
+                            }
+                        }
+
+                        .link {
+                            padding: 0.25em;
+                            transition: color 250ms ease;
+
+                            &:hover,
+                            &:focus {
+                                color: $accent-color;
+                                outline: none;
+
+                                &.action {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .chakra-modal__footer {
+                justify-content: center;
+                .container-language {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1em;
+                    box-sizing: border-box;
+
+                    .icon {
+                        width: 1.75em;
+                        height: 1.75em;
+                        margin: 0 1em;
+                    }
+
+                    .wrapper-switch {
+                        margin: 0 1em;
+                    }
+                }
+            }
+        }
+    }
+}

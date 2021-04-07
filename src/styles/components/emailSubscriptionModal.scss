@@ -1,0 +1,42 @@
+@import "../variables";
+@import "../mixins";
+
+.container-form {
+    box-sizing: border-box;
+
+    .wrapper-field {
+        margin: 2em 0;
+
+        .label {
+            font-size: 1.1em;
+            font-family: "Lato-bold", Arial, Helvetica, sans-serif;
+        }
+
+        .text-field {
+            margin-top: 1em;
+        }
+
+        .link {
+            margin-left: 0.25em;
+            text-decoration: underline;
+        }
+    }
+
+    .button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 4em;
+        padding: 0.75em 3em;
+        border: none;
+        border-radius: 0.625rem;
+        background: $accent-color;
+        color: $white;
+        transition: background 250ms ease;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background: mix($black, $accent-color, 10%);
+        }
+    }
+}

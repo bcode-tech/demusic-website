@@ -1,0 +1,58 @@
+.modal-content {
+    .chakra-modal__content-container {
+        z-index: 1;
+
+        .chakra-modal__content {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 70%;
+            min-height: 35rem;
+            padding: 0 1.25rem;
+            background: $white;
+            box-sizing: border-box;
+
+            @include mq("s", "min") {
+                position: relative;
+                bottom: 0;
+                width: 42.5rem;
+                height: 32.5rem;
+                min-height: auto;
+                margin: auto;
+                border-radius: 0.62rem;
+            }
+
+            .chakra-modal__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 5rem;
+                padding: 2.25rem 0;
+                box-sizing: border-box;
+
+                .title {
+                    margin: 0;
+                    font-size: 1.3em;
+                    font-family: "Lato-bold", Arial, Helvetica, sans-serif;
+                }
+
+                .chakra-modal__close-btn {
+                    margin-left: auto;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                }
+            }
+
+            .chakra-modal__body {
+                height: calc(100% - (5rem));
+
+                .scroll-container {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

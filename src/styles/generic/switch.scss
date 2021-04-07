@@ -1,0 +1,45 @@
+.chakra-switch {
+    font-size: 1.5em;
+
+    .chakra-switch__track {
+        width: 1.375em;
+        height: 0.75em;
+        padding: 0.125em;
+        border-radius: 0.625em;
+        transition: background 250ms ease;
+        background: mix($white, #959595, 20%);
+
+        &:hover {
+            background: #959595;
+        }
+
+        &[data-focus] {
+            background: #959595;
+
+            &[data-checked] {
+                background: mix($black, $accent-color, 25%);
+            }
+        }
+
+        &[data-checked] {
+            background: $accent-color;
+
+            &:hover {
+                background: mix($black, $accent-color, 25%);
+            }
+        }
+
+        .chakra-switch__thumb {
+            width: 0.75em;
+            height: 0.75em;
+            border-radius: 50%;
+            background: $white;
+            transform: translateX(0);
+            transition: transform 250ms ease;
+
+            &[data-checked] {
+                transform: translateX(0.625em);
+            }
+        }
+    }
+}

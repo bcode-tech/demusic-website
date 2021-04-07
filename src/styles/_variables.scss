@@ -1,0 +1,15 @@
+$white: #fff;
+$black: #000;
+$primary-color: #3b3b3b;
+$secondary-color: #fafafa;
+$accent-color: #bb69ff;
+
+$breakpoints: (
+    "xs": 480px,
+    "s": 768px,
+    "m": 992px,
+    "d": 1240px,
+    "dw": 1440px,
+);
+
+$box-shadow-top: 0px 1px 4px rgba(0, 0, 0, 0.25);

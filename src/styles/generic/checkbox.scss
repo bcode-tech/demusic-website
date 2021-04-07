@@ -1,0 +1,61 @@
+.chakra-form-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chakra-checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0.5em 0;
+    cursor: auto !important;
+
+    .chakra-checkbox__control {
+        width: 1.5em;
+        height: 1.5em;
+        border: 0.125rem solid #d7d7d7;
+        border-radius: 0.625rem;
+        transition: border 250ms ease, background 250ms ease;
+        cursor: pointer;
+
+        &:hover {
+            border-color: $accent-color;
+        }
+
+        &[data-focus] {
+            border-color: $accent-color;
+
+            &[data-checked] {
+                border-color: mix($black, $accent-color, 25%);
+                background: mix($black, $accent-color, 25%);
+            }
+        }
+
+        &[data-checked] {
+            background: $accent-color;
+            border-color: $accent-color;
+
+            &:hover {
+                border-color: mix($black, $accent-color, 25%);
+                background: mix($black, $accent-color, 25%);
+            }
+        }
+
+        svg {
+            width: 0.9em;
+            height: 0.9em;
+            stroke: $white !important;
+        }
+    }
+
+    .chakra-checkbox__label {
+        margin: 0;
+        padding: 0.25em 0;
+        font-family: "Lato", Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        cursor: pointer;
+    }
+}
