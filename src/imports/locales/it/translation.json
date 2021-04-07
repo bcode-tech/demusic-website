@@ -2,12 +2,13 @@
     "who_we_are": "Chi siamo",
     "what_is_demusic": "Cos'è DeMusic",
     "perks": "Vantaggi",
-    "why": "Perchè",
+    "why": "Perché",
     "find_out_more": "Scopri di più",
     "subscribe_to_news_letter": "Iscriviti alla Newsletter",
     "subscribe": "Iscriviti",
     "accept_terms_and_conditions": "Accetto i",
     "terms_and_conditions": "Termini e condizioni d'uso",
+    "privacy_policies": "Privacy Policies",
     "first_name": "Nome",
     "email": "Email",
     "it": "It",
@@ -15,7 +16,7 @@
     "italian": "Italiano",
     "english": "Inglese",
     "perks_title": "I vantaggi di DeMusic",
-    "why_us_title": "Perchè DeMusic",
+    "why_us_title": "Perché DeMusic",
     "why_us_content_part_one": "Il team di DeMusic ha messo in gioco tutto il suo know-how e le sue capacità in questo settore di crescente interesse (blockchain & NFT), per la realizzazione di una piattaforma rivoluzionaria, all’interno della quale non solo viene completamente rivista l’infrastruttura informatica di questa tipologia di servizi, ma vengono anche sovvertiti i modelli economici delle principali piattaforme di streaming musicale esistenti.",
     "why_us_content_part_two": "Grazie a questa visione e all’utilizzo di tecnologie innovative, DeMusic è in grado di fornire al pubblico una piattaforma aperta e trasparente, in cui ogni partecipante può godere di incentivi e funzionalitá uniche, minimizzando i costi per la fruizione del servizio e massimizzando i guadagni (sia in termini economici, sia in termini funzionali) per tutti gli attori dell’ecosistema.",
     "card_rights_title": "Diritti d’autore tokenizzati",
@@ -30,5 +31,7 @@
     "who_we_are_content_part_two": "KNOBS offre consulenza e sviluppa progetti e piattaforme  blockchain-based dal 2014;",
     "who_we_are_content_part_three": "BCode è una startup innovativa accreditata come spin-off del Politecnico di Milano ed offre prodotti e servizi basati su tecnologia blockchain, come ad esempio notarizzazioni, tracciabilità, votazioni, gestione di token e gare d’appalto.",
     "what_is_content_part_one": "DeMusic, ottenuto fondendo “Decentralized” e “Music”, è una piattaforma decentralizzata e aperta a tutti, per la riproduzione digitale in streaming di musica.",
-    "what_is_content_part_two": "Grazie alla tecnologia blockchain, smart contract e NFT, DeMusic è in grado di implementare un ecosistema tra i suoi utenti tale per cui ogni partecipante possa vivere la propria passione musicale in modo completamente rivoluzionario, godendo di concreti benefici economici in modo trasparente e verificabile da chiunque."
+    "what_is_content_part_two": "Grazie alla tecnologia blockchain, smart contract e NFT, DeMusic è in grado di implementare un ecosistema tra i suoi utenti tale per cui ogni partecipante possa vivere la propria passione musicale in modo completamente rivoluzionario, godendo di concreti benefici economici in modo trasparente e verificabile da chiunque.",
+    "slogan_main": "DeMusic, piattaforma di streaming musicale decentralizzata",
+    "slogan_subtitle": "Lascia che la musica fluisca dagli artisti alle tue orecchie"
 }

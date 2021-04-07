@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import {
-    Button,
     Drawer,
     DrawerBody,
     DrawerFooter,
@@ -11,9 +10,8 @@ import {
     DrawerCloseButton,
     Switch,
 } from "@chakra-ui/react";
-import { find } from "lodash";
 
-import { headerVoices } from "../../imports/config";
+import Voices from "../voices/Voices";
 
 const CustomDrawer = ({ isOpen, onOpen, onClose, btnRef, onModalOpen }) => {
     const { t, i18n } = useTranslation();
@@ -42,29 +40,7 @@ const CustomDrawer = ({ isOpen, onOpen, onClose, btnRef, onModalOpen }) => {
                         <DrawerCloseButton />
                     </DrawerHeader>
                     <DrawerBody>
-                        <ul className="list reset-list">
-                            {headerVoices.map(voice => (
-                                <li className="list-item" key={voice.name}>
-                                    {voice.action ? (
-                                        <Button
-                                            className="button"
-                                            onClick={
-                                                find(
-                                                    actions,
-                                                    obj => obj.name === "more",
-                                                ).action
-                                            }
-                                        >
-                                            {t(voice.text)}
-                                        </Button>
-                                    ) : (
-                                        <a href="" className="link">
-                                            {t(voice.text)}
-                                        </a>
-                                    )}
-                                </li>
-                            ))}
-                        </ul>
+                        <Voices onModalOpen={onModalOpen} />
                     </DrawerBody>
                     <DrawerFooter>
                         <div className="container-language">

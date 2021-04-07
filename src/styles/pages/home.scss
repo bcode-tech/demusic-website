@@ -68,7 +68,7 @@
                 justify-content: flex-end;
                 width: 50%;
 
-                .text {
+                .link {
                     visibility: hidden;
                 }
 
@@ -176,11 +176,15 @@
                     text-align: center;
                 }
 
-                .icon {
+                .container-icon {
                     width: 8em;
                     height: 8em;
                     margin: 4em auto;
-                    background: #d6d6d6;
+
+                    .icon {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
 
                 .text {
@@ -225,14 +229,33 @@
 
                 @include mq("m", "min") {
                     width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                 }
             }
 
             .container-image {
+                .link {
+                    visibility: hidden;
+                }
+
+                .img {
+                    margin: 0 auto;
+
+                    @include mq("m", "min") {
+                        margin: 0;
+                    }
+                }
             }
 
             .container-text {
                 box-sizing: border-box;
+                margin-top: 2em;
+
+                @include mq("m", "min") {
+                    margin-top: 0;
+                }
 
                 .text {
                     margin: 0;
@@ -272,14 +295,46 @@
                     padding-left: 2em;
                 }
             }
+
+            .container-image {
+                .img {
+                    display: block;
+                    width: 20em;
+                    height: 20em;
+
+                    @include mq("m", "min") {
+                        width: 25em;
+                        height: 25em;
+                    }
+                }
+            }
         }
     }
 
     .what {
         .container-content {
+            flex-direction: column-reverse;
+
+            @include mq("m", "min") {
+                flex-direction: row;
+            }
+
             .container-text {
                 @include mq("m", "min") {
                     padding-right: 2em;
+                }
+            }
+
+            .container-image {
+                @include mq("m", "min") {
+                    display: flex;
+                    align-items: flex-end;
+                }
+
+                .img {
+                    display: block;
+                    width: 18em;
+                    height: 25em;
                 }
             }
         }
