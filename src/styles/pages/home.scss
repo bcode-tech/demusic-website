@@ -86,13 +86,13 @@
         padding-bottom: 4em;
         background: $primary-color;
         box-sizing: border-box;
-        text-align: center;
 
         .title {
             margin: 0;
             font-size: 1.8em;
             color: $secondary-color;
             font-family: "Lato-bold", Arial, Helvetica, sans-serif;
+            text-align: center;
         }
 
         .text {
@@ -100,10 +100,16 @@
             font-size: 1.2em;
             margin-top: 4rem;
             color: $secondary-color;
+            text-align: center;
+
+            @include mq("m", "min") {
+                text-align: left;
+            }
         }
 
         .button {
-            margin-top: 4em;
+            display: block;
+            margin: 4em auto 0 auto;
             padding: 0.75rem 1.25rem;
             border: none;
             border-radius: 0.625rem;
@@ -147,7 +153,6 @@
                 background: $white;
                 box-shadow: $accent-color 0 0.25em 0,
                     rgb(0 0 0 / 25%) 0 0.25em 0.5em;
-                text-align: center;
                 transition: box-shadow 250ms ease, scale 250ms ease-in-out;
                 box-sizing: border-box;
 
@@ -168,6 +173,7 @@
                 .title {
                     margin: 0;
                     font-size: 1.2em;
+                    text-align: center;
                 }
 
                 .icon {
@@ -179,6 +185,101 @@
 
                 .text {
                     margin: 0;
+                    text-align: center;
+
+                    @include mq("m", "min") {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .who,
+    .what {
+        padding-top: 4em;
+        padding-bottom: 4em;
+        box-sizing: border-box;
+
+        .title {
+            margin: 0;
+            font-size: 1.8em;
+            color: $primary-color;
+            text-align: center;
+            font-family: "Lato-bold", Arial, Helvetica, sans-serif;
+        }
+
+        .container-content {
+            display: flex;
+            flex-direction: column;
+            margin-top: 4em;
+            box-sizing: border-box;
+
+            @include mq("m", "min") {
+                flex-direction: row;
+            }
+
+            .container-image,
+            .container-text {
+                width: 100%;
+
+                @include mq("m", "min") {
+                    width: 50%;
+                }
+            }
+
+            .container-image {
+            }
+
+            .container-text {
+                box-sizing: border-box;
+
+                .text {
+                    margin: 0;
+                    margin-top: 2em;
+                    text-align: center;
+
+                    @include mq("m", "min") {
+                        text-align: left;
+                    }
+                }
+
+                .button {
+                    display: block;
+                    margin: 4em auto 0 auto;
+                    padding: 0.75rem 1.25rem;
+                    border: none;
+                    border-radius: 0.625rem;
+                    font-size: 1.1em;
+                    background: $accent-color;
+                    color: $white;
+                    transition: background 250ms ease;
+                    cursor: pointer;
+
+                    &:hover,
+                    &:focus {
+                        background: mix($black, $accent-color, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    .who {
+        .container-content {
+            .container-text {
+                @include mq("m", "min") {
+                    padding-left: 2em;
+                }
+            }
+        }
+    }
+
+    .what {
+        .container-content {
+            .container-text {
+                @include mq("m", "min") {
+                    padding-right: 2em;
                 }
             }
         }

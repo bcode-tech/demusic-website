@@ -15,11 +15,11 @@ import CustomDrawer from "../components/customDrawer/CustomDrawer";
 import CustomModal from "../components/customModal/CustomModal";
 import EmailSubscriptionModal from "../components/emailSubscriptionModal/EmailSubscriptionModal";
 
-import Logo from "../public/assets/icons/logo.svg";
-import Menu from "../public/assets/icons/menu.svg";
-import MoreOrLess from "../public/assets/icons/more-or-less.svg";
+import Logo from "../imports/assets/icons/logo.svg";
+import Menu from "../imports/assets/icons/menu.svg";
+import MoreOrLess from "../imports/assets/icons/more-or-less.svg";
 
-import testimonial from "../public/assets/images/testimonial.png";
+import testimonial from "../imports/assets/images/testimonial.png";
 
 import "../styles/index.scss";
 import "../styles/pages/home.scss";
@@ -229,6 +229,43 @@ function App() {
                             )}
                         </div>
                     </section>
+                    <section className={`who padding-${responsiveState}`}>
+                        <h2 className="title">{t("who_we_are")}</h2>
+                        <div className="container-content">
+                            <div className="container-image"></div>
+                            <div className="container-text">
+                                <p className="text">
+                                    {t("who_we_are_content_part_one")}
+                                </p>
+                                <p className="text">
+                                    {t("who_we_are_content_part_two")}
+                                </p>
+                                <p className="text">
+                                    {t("who_we_are_content_part_three")}
+                                </p>
+                                <Button className="button">
+                                    {t("find_out_more")}
+                                </Button>
+                            </div>
+                        </div>
+                    </section>
+                    <section className={`what padding-${responsiveState}`}>
+                        <h2 className="title">{t("what_is_demusic")}</h2>
+                        <div className="container-content">
+                            <div className="container-text">
+                                <p className="text">
+                                    {t("what_is_content_part_one")}
+                                </p>
+                                <p className="text">
+                                    {t("what_is_content_part_two")}
+                                </p>
+                                <Button className="button">
+                                    {t("find_out_more")}
+                                </Button>
+                            </div>
+                            <div className="container-image"></div>
+                        </div>
+                    </section>
                     <section className={`perks padding-${responsiveState}`}>
                         <h2 className="title">{t("perks_title")}</h2>
                         <div className="container-cards">
@@ -238,7 +275,7 @@ function App() {
                                 </h3>
                                 <div className="icon"></div>
                                 <div className="text">
-                                    {t("card_rights_text")}
+                                    {t("card_rights_content")}
                                 </div>
                             </div>
                             <div className="card">
@@ -247,7 +284,7 @@ function App() {
                                 </h3>
                                 <div className="icon"></div>
                                 <div className="text">
-                                    {t("card_support_text")}
+                                    {t("card_support_content")}
                                 </div>
                             </div>
                             <div className="card">
@@ -256,7 +293,7 @@ function App() {
                                 </h3>
                                 <div className="icon"></div>
                                 <div className="text">
-                                    {t("card_streamer_text")}
+                                    {t("card_streamer_content")}
                                 </div>
                             </div>
                             <div className="card">
@@ -265,7 +302,7 @@ function App() {
                                 </h3>
                                 <div className="icon"></div>
                                 <div className="text">
-                                    {t("card_trasparency_text")}
+                                    {t("card_trasparency_content")}
                                 </div>
                             </div>
                         </div>
