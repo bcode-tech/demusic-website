@@ -81,132 +81,15 @@
         }
     }
 
-    .why {
-        padding-top: 4em;
-        padding-bottom: 4em;
-        background: $primary-color;
-        box-sizing: border-box;
-
-        .title {
-            margin: 0;
-            font-size: 1.8em;
-            color: $secondary-color;
-            font-family: "Lato-bold", Arial, Helvetica, sans-serif;
-            text-align: center;
-        }
-
-        .text {
-            margin: 0;
-            font-size: 1.2em;
-            margin-top: 4rem;
-            color: $secondary-color;
-            text-align: center;
-
-            @include mq("m", "min") {
-                text-align: left;
-            }
-        }
-
-        .button {
-            display: block;
-            margin: 4em auto 0 auto;
-            padding: 0.75rem 1.25rem;
-            border: none;
-            border-radius: 0.625rem;
-            font-size: 1.1em;
-            background: $accent-color;
-            color: $white;
-            transition: background 250ms ease;
-            cursor: pointer;
-
-            &:hover,
-            &:focus {
-                background: mix($white, $accent-color, 10%);
-            }
-        }
-    }
-
-    .perks {
-        padding-top: 4em;
-        padding-bottom: 4em;
-        box-sizing: border-box;
-
-        .title {
-            margin: 0;
-            font-size: 1.8em;
-            color: $primary-color;
-            text-align: center;
-            font-family: "Lato-bold", Arial, Helvetica, sans-serif;
-        }
-
-        .container-cards {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 4em;
-            gap: 4em 2em;
-
-            .card {
-                width: 100%;
-                padding: 2em;
-                border-radius: 0.625rem;
-                background: $white;
-                box-shadow: $accent-color 0 0.25em 0,
-                    rgb(0 0 0 / 25%) 0 0.25em 0.5em;
-                transition: box-shadow 250ms ease, scale 250ms ease-in-out;
-                box-sizing: border-box;
-
-                @include mq("m", "min") {
-                    padding: 4em;
-                }
-
-                &:hover {
-                    box-shadow: $accent-color 0 0.375em 0,
-                        rgb(0 0 0 / 25%) 0 0.25em 0.5em;
-                    transform: scale(1.02);
-                }
-
-                @include mq("s", "min") {
-                    width: calc(50% - 2em);
-                }
-
-                .title {
-                    margin: 0;
-                    font-size: 1.2em;
-                    text-align: center;
-                }
-
-                .container-icon {
-                    width: 8em;
-                    height: 8em;
-                    margin: 4em auto;
-
-                    .icon {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-
-                .text {
-                    margin: 0;
-                    text-align: center;
-
-                    @include mq("m", "min") {
-                        text-align: left;
-                    }
-                }
-            }
-        }
-    }
-
     .who,
     .what {
-        padding-top: 4em;
-        padding-bottom: 4em;
+        padding-top: 5em;
+        padding-bottom: 2em;
         box-sizing: border-box;
 
         .title {
             margin: 0;
+            margin-top: 2rem;
             font-size: 1.8em;
             color: $primary-color;
             text-align: center;
@@ -216,7 +99,7 @@
         .container-content {
             display: flex;
             flex-direction: column;
-            margin-top: 4em;
+            margin-top: 2em;
             box-sizing: border-box;
 
             @include mq("m", "min") {
@@ -336,6 +219,126 @@
                     width: 18em;
                     height: 25em;
                 }
+            }
+        }
+    }
+
+    .perks {
+        padding-top: 5em;
+        padding-bottom: 4em;
+        box-sizing: border-box;
+
+        .title {
+            margin: 0;
+            margin-top: 2rem;
+            font-size: 1.8em;
+            color: $primary-color;
+            text-align: center;
+            font-family: "Lato-bold", Arial, Helvetica, sans-serif;
+        }
+
+        .container-cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 4em;
+            gap: 4em 2em;
+
+            .card {
+                width: 100%;
+                padding: 2em;
+                border-radius: 0.625rem;
+                background: $white;
+                box-shadow: $accent-color 0 0.25em 0,
+                    rgb(0 0 0 / 25%) 0 0.25em 0.5em;
+                transition: box-shadow 250ms ease, scale 250ms ease-in-out;
+                box-sizing: border-box;
+
+                @include mq("m", "min") {
+                    padding: 4em;
+                }
+
+                &:hover {
+                    box-shadow: $accent-color 0 0.375em 0,
+                        rgb(0 0 0 / 25%) 0 0.25em 0.5em;
+                    transform: scale(1.02);
+                }
+
+                @include mq("s", "min") {
+                    width: calc(50% - 2em);
+                }
+
+                .title {
+                    margin: 0;
+                    font-size: 1.2em;
+                    text-align: center;
+                }
+
+                .container-icon {
+                    width: 8em;
+                    height: 8em;
+                    margin: 4em auto;
+
+                    .icon {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .text {
+                    margin: 0;
+                    text-align: center;
+
+                    @include mq("m", "min") {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .why {
+        padding-top: 5em;
+        padding-bottom: 4em;
+        background: $primary-color;
+        box-sizing: border-box;
+
+        .title {
+            margin: 0;
+            margin-top: 2rem;
+            font-size: 1.8em;
+            color: $secondary-color;
+            font-family: "Lato-bold", Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .text {
+            margin: 0;
+            font-size: 1.2em;
+            margin-top: 4rem;
+            color: $secondary-color;
+            text-align: center;
+
+            @include mq("m", "min") {
+                text-align: left;
+            }
+        }
+
+        .button {
+            display: block;
+            margin: 4em auto 0 auto;
+            padding: 0.75rem 1.25rem;
+            border: none;
+            border-radius: 0.625rem;
+            font-size: 1.1em;
+            background: $accent-color;
+            color: $white;
+            transition: background 250ms ease;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                background: mix($white, $accent-color, 10%);
             }
         }
     }
