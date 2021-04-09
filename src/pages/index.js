@@ -13,6 +13,7 @@ import CustomDrawer from "../components/customDrawer/CustomDrawer";
 import CustomModal from "../components/customModal/CustomModal";
 import EmailSubscriptionModal from "../components/emailSubscriptionModal/EmailSubscriptionModal";
 import Voices from "../components/voices/Voices";
+import Seo from "../components/seo/Seo";
 
 import Logo from "../imports/assets/icons/logo.svg";
 import Menu from "../imports/assets/icons/menu.svg";
@@ -107,6 +108,7 @@ function App() {
 
     return (
         <div className="page">
+            <Seo title="DeMusic - Where music meets blockchain" />
             <header
                 id="header"
                 className={`${

@@ -2,6 +2,9 @@ module.exports = {
     siteMetadata: {
         title: "demusic",
         siteUrl: "https://demusic.info",
+        description: "Decentralized Music Streaming Platform.",
+        author: "BCode Srl",
+        keywords: ["music", "blockchain", "decentralization"],
     },
     plugins: [
         "gatsby-plugin-sass",
