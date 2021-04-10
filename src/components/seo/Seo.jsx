@@ -3,22 +3,20 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-import appleIcon57 from "../../imports/assets/favicon/apple-icon-57x57.png";
-import appleIcon60 from "../../imports/assets/favicon/apple-icon-60x60.png";
-import appleIcon72 from "../../imports/assets/favicon/apple-icon-72x72.png";
-import appleIcon76 from "../../imports/assets/favicon/apple-icon-76x76.png";
-import appleIcon114 from "../../imports/assets/favicon/apple-icon-114x114.png";
-import appleIcon120 from "../../imports/assets/favicon/apple-icon-120x120.png";
-import appleIcon144 from "../../imports/assets/favicon/apple-icon-144x144.png";
-import appleIcon152 from "../../imports/assets/favicon/apple-icon-152x152.png";
-import appleIcon180 from "../../imports/assets/favicon/apple-icon-180x180.png";
-import androidIcon36 from "../../imports/assets/favicon/android-icon-192x192.png";
-import favIcon32 from "../../imports/assets/favicon/favicon-32x32.png";
-import favIcon96 from "../../imports/assets/favicon/favicon-96x96.png";
-import favIcon16 from "../../imports/assets/favicon/favicon-16x16.png";
-import msIcon144 from "../../imports/assets/favicon/ms-icon-144x144.png";
-
-import manifest from "../../imports/assets/favicon/manifest.json";
+const appleIcon57 =  "/favicon/apple-icon-57x57.png";
+const appleIcon60 =  "/favicon/apple-icon-60x60.png";
+const appleIcon72 =  "/favicon/apple-icon-72x72.png";
+const appleIcon76 =  "/favicon/apple-icon-76x76.png";
+const appleIcon114 =  "/favicon/apple-icon-114x114.png";
+const appleIcon120 =  "/favicon/apple-icon-120x120.png";
+const appleIcon144 =  "/favicon/apple-icon-144x144.png";
+const appleIcon152 =  "/favicon/apple-icon-152x152.png";
+const appleIcon180 =  "/favicon/apple-icon-180x180.png";
+const androidIcon36 =  "/favicon/android-icon-192x192.png";
+const favIcon32 =  "/favicon/favicon-32x32.png";
+const favIcon96 =  "/favicon/favicon-96x96.png";
+const favIcon16 =  "/favicon/favicon-16x16.png";
+const msIcon144 =  "/favicon/ms-icon-144x144.png";
 
 function Seo({ description, lang, meta, image: metaImage, title }) {
     const { site } = useStaticQuery(
@@ -38,10 +36,6 @@ function Seo({ description, lang, meta, image: metaImage, title }) {
     );
 
     const metaDescription = description || site.siteMetadata.description;
-    const image =
-        metaImage && metaImage.src
-            ? `${site.siteMetadata.siteUrl}${metaImage.src}`
-            : null;
 
     return (
         <Helmet
@@ -127,7 +121,7 @@ function Seo({ description, lang, meta, image: metaImage, title }) {
                         ? [
                               {
                                   property: "og:image",
-                                  content: image,
+                                  content: metaImage.src,
                               },
                               {
                                   property: "og:image:width",

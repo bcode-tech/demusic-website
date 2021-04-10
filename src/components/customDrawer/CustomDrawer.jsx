@@ -16,16 +16,6 @@ import Voices from "../voices/Voices";
 const CustomDrawer = ({ isOpen, onOpen, onClose, btnRef, onModalOpen }) => {
     const { t, i18n } = useTranslation();
 
-    const actions = [
-        {
-            name: "more",
-            action: () => {
-                onClose();
-                onModalOpen();
-            },
-        },
-    ];
-
     return (
         <Drawer
             placement="right"

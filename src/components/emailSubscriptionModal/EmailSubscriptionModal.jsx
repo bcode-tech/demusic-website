@@ -14,8 +14,9 @@ import * as Yup from "yup";
 import { mailchimpAction } from "../../imports/constants";
 
 import "../../styles/components/emailSubscriptionModal.scss";
+import { Link } from "gatsby";
 
-const EmailSubscriptionModal = ({}) => {
+const EmailSubscriptionModal = () => {
     const { t } = useTranslation();
 
     const defaultFormValues = {
@@ -108,9 +109,9 @@ const EmailSubscriptionModal = ({}) => {
                             >
                                 <span>
                                     {t("accept_terms_and_conditions")}
-                                    <a href="" className="link">
+                                    <Link href="#" className="link">
                                         {t("terms_and_conditions")}
-                                    </a>
+                                    </Link>
                                 </span>
                             </Checkbox>
                         </div>

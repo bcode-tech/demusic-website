@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Button } from "@chakra-ui/react";
+import { Button, Link } from "@chakra-ui/react";
 
 const Voices = ({ onModalOpen }) => {
     const { t } = useTranslation();
@@ -8,24 +8,24 @@ const Voices = ({ onModalOpen }) => {
     return (
         <ul className="list reset-list">
             <li className="list-item">
-                <a href="#who" className="link">
+                <Link href="#who" className="link">
                     {t("who_we_are")}
-                </a>
+                </Link>
             </li>
             <li className="list-item">
-                <a href="#what" className="link">
+                <Link href="#what" className="link">
                     {t("what_is_demusic")}
-                </a>
+                </Link>
             </li>
             <li className="list-item">
-                <a href="#perks" className="link">
+                <Link href="#perks" className="link">
                     {t("perks")}
-                </a>
+                </Link>
             </li>
             <li className="list-item">
-                <a href="#why" className="link">
+                <Link href="#why" className="link">
                     {t("why")}
-                </a>
+                </Link>
             </li>
             <li className="list-item">
                 <Button className="button" onClick={() => onModalOpen()}>

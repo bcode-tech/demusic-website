@@ -3,7 +3,7 @@ import SimpleBar from "simplebar-react";
 import { useTranslation } from "react-i18next";
 import { useMedia } from "react-use";
 import { useScrolling, useWindowSize } from "react-use";
-import { useDisclosure, Button } from "@chakra-ui/react";
+import { useDisclosure, Button, Link, Box } from "@chakra-ui/react";
 
 import "../i18n";
 
@@ -104,11 +104,15 @@ function App() {
                 onDrawerClose();
             }
         }
-    }, [isDrawerOpen, isModalOpen]);
+    }, [isDrawerOpen, isModalOpen, onDrawerClose]);
 
     return (
         <div className="page">
-            <Seo title="DeMusic - Where music meets blockchain" />
+            <Seo
+                title={t('slogan_main')}
+                description={t("slogan_subtitle")}
+                image={{ src: '/favicon/favicon-96x96.png', width: 96, height: 96 }}
+            />
             <header
                 id="header"
                 className={`${
@@ -132,7 +136,7 @@ function App() {
                     <div className="wrapper-voices">
                         <Voices onModalOpen={onModalOpen} />
                         <div className="container-language">
-                            <div
+                            <Box
                                 className="display-language"
                                 onClick={() =>
                                     setShowLanguageDropdown(
@@ -146,7 +150,7 @@ function App() {
                                         showLanguageDropdown ? "less" : ""
                                     }`}
                                 />
-                            </div>
+                            </Box>
                             {showLanguageDropdown && (
                                 <ul
                                     className="list dropdown reset-list"
@@ -397,14 +401,14 @@ function App() {
                         <Logo className="logo" />
                         <ul className="list wrapper-terms reset-list">
                             <li className="list-item">
-                                <a href="" className="link">
+                                <Link href="" className="link">
                                     {t("terms_and_conditions")}
-                                </a>
+                                </Link>
                             </li>
                             <li className="list-item">
-                                <a href="" className="link">
+                                <Link href="" className="link">
                                     {t("privacy_policies")}
-                                </a>
+                                </Link>
                             </li>
                             <li className="list-item">
                                 <p className="text">Copyright © 2021 BCode</p>

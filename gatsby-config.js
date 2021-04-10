@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: "demusic",
-        siteUrl: "https://demusic.info",
-        description: "Decentralized Music Streaming Platform.",
+        title: "DeMusic",
+        siteUrl: "https://demusic.it",
+        description: "Live your passion for music in a completely revolutionary way, support your favorite artists in a transparent and verifiable way",
         author: "BCode Srl",
         keywords: ["music", "blockchain", "decentralization"],
     },
