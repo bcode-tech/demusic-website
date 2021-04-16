@@ -45,12 +45,59 @@
             }
 
             .chakra-modal__body {
+                position: absolute;
+                top: 5rem;
+                left: 0;
+                width: 100%;
                 height: calc(100% - (5rem));
 
                 .scroll-container {
                     position: relative;
                     width: 100%;
                     height: 100%;
+                }
+
+                .wrapper-content {
+                    padding: 0 1.25rem;
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+    }
+
+    &.privacy-policy,
+    &.cookie-policy {
+        .chakra-modal__content-container {
+            .chakra-modal__content {
+                .chakra-modal__body {
+                    .scroll-container {
+                        .wrapper-content {
+                            .title {
+                                margin: 0;
+                                margin-top: 2rem;
+                                font-size: 1.1em;
+                                font-family: "Lato-bold", Arial, Helvetica,
+                                    sans-serif;
+                            }
+
+                            .text {
+                                margin: 0;
+                                margin-top: 2rem;
+                                font-size: 1em;
+                            }
+
+                            .list-item {
+                                margin: 0.5rem 0;
+                            }
+
+                            .img {
+                                display: block;
+                                width: 90%;
+                                margin: 0 auto;
+                                margin-top: 2rem;
+                            }
+                        }
+                    }
                 }
             }
         }

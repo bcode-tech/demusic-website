@@ -30,7 +30,7 @@ const CustomDrawer = ({ isOpen, onOpen, onClose, btnRef, onModalOpen }) => {
                         <DrawerCloseButton />
                     </DrawerHeader>
                     <DrawerBody>
-                        <Voices onModalOpen={onModalOpen} />
+                        <Voices onClose={onClose} onModalOpen={onModalOpen} />
                     </DrawerBody>
                     <DrawerFooter>
                         <div className="container-language">

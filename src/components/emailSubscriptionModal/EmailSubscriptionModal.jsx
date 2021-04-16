@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import {
     ModalContent,
     ModalHeader,
-    ModalFooter,
     ModalBody,
     ModalCloseButton,
     Checkbox,
@@ -41,90 +40,94 @@ const EmailSubscriptionModal = () => {
                 <ModalCloseButton />
             </ModalHeader>
             <ModalBody>
-                <div className="container-form">
-                    <form
-                        action={`${mailchimpAction.url}/subscribe/post`}
-                        method="POST"
-                        noValidate
-                    >
-                        <input
-                            type="hidden"
-                            name="u"
-                            value={mailchimpAction.u}
-                        />
-                        <input
-                            type="hidden"
-                            name="id"
-                            value={mailchimpAction.id}
-                        />
+                <div className="wrapper-content">
+                    <div className="container-form">
+                        <form
+                            action={`${mailchimpAction.url}/subscribe/post`}
+                            method="POST"
+                            noValidate
+                        >
+                            <input
+                                type="hidden"
+                                name="u"
+                                value={mailchimpAction.u}
+                            />
+                            <input
+                                type="hidden"
+                                name="id"
+                                value={mailchimpAction.id}
+                            />
 
-                        <div className="wrapper-field">
-                            <div className="label" htmlFor="fname">
-                                {t("first_name")}
+                            <div className="wrapper-field">
+                                <div className="label" htmlFor="fname">
+                                    {t("first_name")}
+                                </div>
+                                <input
+                                    type="text"
+                                    name="FNAME"
+                                    id="fname"
+                                    value={
+                                        emailSubscriptionForm.values.firstName
+                                    }
+                                    onChange={e =>
+                                        emailSubscriptionForm.setFieldValue(
+                                            "firstName",
+                                            e.target.value,
+                                        )
+                                    }
+                                    className="text-field"
+                                />
+                            </div>
+                            <div className="wrapper-field">
+                                <div className="label" htmlFor="email">
+                                    {t("email")}
+                                </div>
+                                <input
+                                    type="email"
+                                    name="EMAIL"
+                                    id="email"
+                                    value={emailSubscriptionForm.values.email}
+                                    onChange={e =>
+                                        emailSubscriptionForm.setFieldValue(
+                                            "email",
+                                            e.target.value,
+                                        )
+                                    }
+                                    className="text-field"
+                                />
+                            </div>
+                            <div className="wrapper-field">
+                                <Checkbox
+                                    name={"gdpr[45294]"}
+                                    value={
+                                        emailSubscriptionForm.values
+                                            .privacyCheck
+                                    }
+                                    onChange={value =>
+                                        emailSubscriptionForm.setFieldValue(
+                                            "privacyCheck",
+                                            value.currentTarget.checked,
+                                        )
+                                    }
+                                >
+                                    <span>
+                                        {t("accept_terms_and_conditions")}
+                                        <Link href="#" className="link">
+                                            {t("terms_and_conditions")}
+                                        </Link>
+                                    </span>
+                                </Checkbox>
                             </div>
                             <input
-                                type="text"
-                                name="FNAME"
-                                id="fname"
-                                value={emailSubscriptionForm.values.firstName}
-                                onChange={e =>
-                                    emailSubscriptionForm.setFieldValue(
-                                        "firstName",
-                                        e.target.value,
-                                    )
-                                }
-                                className="text-field"
+                                type="submit"
+                                name="subscribe"
+                                value={t("subscribe")}
+                                className="button"
                             />
-                        </div>
-                        <div className="wrapper-field">
-                            <div className="label" htmlFor="email">
-                                {t("email")}
-                            </div>
-                            <input
-                                type="email"
-                                name="EMAIL"
-                                id="email"
-                                value={emailSubscriptionForm.values.email}
-                                onChange={e =>
-                                    emailSubscriptionForm.setFieldValue(
-                                        "email",
-                                        e.target.value,
-                                    )
-                                }
-                                className="text-field"
-                            />
-                        </div>
-                        <div className="wrapper-field">
-                            <Checkbox
-                                name={"gdpr[45294]"}
-                                value={
-                                    emailSubscriptionForm.values.privacyCheck
-                                }
-                                onChange={value =>
-                                    emailSubscriptionForm.setFieldValue(
-                                        "privacyCheck",
-                                        value.currentTarget.checked,
-                                    )
-                                }
-                            >
-                                <span>
-                                    {t("accept_terms_and_conditions")}
-                                    <Link href="#" className="link">
-                                        {t("terms_and_conditions")}
-                                    </Link>
-                                </span>
-                            </Checkbox>
-                        </div>
-                        <input
-                            type="submit"
-                            name="subscribe"
-                            value={t("subscribe")}
-                            className="button"
-                        />
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </ModalBody>
-            <ModalFooter></ModalFooter>
         </ModalContent>
     );
 };

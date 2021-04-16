@@ -1,0 +1,77 @@
+{
+    "content": {
+        "cookie_definition": {
+            "title": "Definizione cookie",
+            "content": [
+                {
+                    "type": "text",
+                    "value": "I cookie sono brevi frammenti di testo (lettere e/o numeri) che permettono al server web di memorizzare sul client (il browser) informazioni da riutilizzare nel corso della medesima visita al sito (cookie di sessione) o in seguito, anche a distanza di giorni (cookie persistenti). I cookie vengono memorizzati, in base alle preferenze dell’utente, dal singolo browser sullo specifico dispositivo utilizzato (computer, tablet, smartphone). I cookie vengono utilizzati per garantire il corretto funzionamento delle procedure e migliorare l’esperienza di uso delle applicazioni online. Di seguito forniamo informazioni dettagliate sull’uso dei cookie e su come gestirli, relativamente al sito www.bcode.cloud"
+                }
+            ]
+        },
+        "types_of_cookie": {
+            "title": "Tipologie di cookie",
+            "content": [
+                {
+                    "type": "text",
+                    "value": "Visitando questo sito si possono ricevere cookie sia dal sito visitato (“proprietari”) cosiddetti propri, sia da siti gestiti da altre organizzazioni (“terze parti”). La presenza di questi ultimi comporta la trasmissione di cookie da e verso i siti gestiti dalle suddette terze parti. La gestione delle informazioni raccolte da “terze parti” è disciplinata dalle relative informative cui si prega di fare riferimento. Per garantire una maggiore trasparenza e comodità, si riportano nella tabella, a fianco di ciascuna “terza parte”, gli indirizzi web delle diverse informative e delle modalità per la gestione dei cookie. In base alle caratteristiche e all’utilizzo dei cookie possiamo distinguere diverse categorie: Cookie Tecnici: sono quelli utilizzati al solo fine di effettuare la trasmissione di una comunicazione su una rete di comunicazione elettronica, o nella misura strettamente necessaria al fornitore di un servizio della società dell’informazione esplicitamente richiesto dall’abbonato o dall’utente a erogare tale servizio. Essi non vengono utilizzati per scopi ulteriori e sono normalmente installati direttamente dal titolare o gestore del sito web. Tutti i cookie tecnici non richiedono consenso dell’utente, perciò vengono installati automaticamente a seguito dell’accesso al sito. È comunque importante sottolineare che al fine di fornire regolarmente i propri servizi on-line, il Titolare del sito, cioè BCode SRL, ha necessità di utilizzare i cookie tecnici. Qualora pertanto venisse disabilitato l’utilizzo dei suddetti cookie, per ragioni esclusivamente tecniche, BCode SRL sarà impossibilitato a fornire tutti o alcuni servizi ovvero a fornirli con le modalità richieste. I cookie tecnici si distinguono a loro volta in:"
+                },
+                {
+                    "type": "image",
+                    "value": "https://bcode.cloud/wp-content/uploads/2021/01/Schermata-2021-01-20-alle-18.31.46-2048x1250.png"
+                },
+                {
+                    "type": "text",
+                    "value": "Dal momento che l’installazione di Cookie e di altri sistemi di tracciamento operata da parti terze tramite i servizi utilizzati all’interno di questa applicazione non può essere tecnicamente controllata dal Titolare, ogni riferimento specifico a cookie e sistema di tracciamento installati da terze parti é da considerarsi indicativo. Per ottenere informazioni complete si invita a consultare la privacy policy degli eventuali servizi terzi indicati nel presente documento. Vista l’oggettiva complessità legata all’identificazione delle tecnologie basate sui Cookie ed alla loro integrazione molto stretta con il funzionamento del web, l’Utente é invitato a contattare il Titolare qualora volesse ricevere qualunque approfondimento relativo all’utilizzo dei cookie stessi e ad eventuali utilizzi degli stessi, ad esempio ad opera di terzi, effettuati tramite questo sito."
+                }
+            ]
+        },
+        "consent_to_cookie": {
+            "title": "Prestazione del consenso all'utilizzo dei cookie",
+            "content": [
+                {
+                    "type": "text",
+                    "value": "Il consenso dell’utente non é necessario per cookie tecnici. l’utente, invece, esprime il proprio consenso all’uso dei cookie ad es. di profilazione propri o di terze parti (i quali sono volti a creare profili relativi all’utente al fine di inviargli messaggi pubblicitari in linea con le sue preferenze), o ancora analitici di terze parti (che non raccolgono informazioni dell’utente in forma aggregata) continuando la navigazione sul sito web, sia compiendo un intervento attivo attraverso la selezione di un elemento contenuto nella pagina sottostante il banner (a titolo esemplificativo facendo click su un’immagine o ad un link) sia facendo il click sul tasto “ok/accetto” presente nel banner stesso."
+                }
+            ]
+        },
+        "manage_cookie": {
+            "title": "Gestione dei cookie",
+            "content": [
+                {
+                    "type": "text",
+                    "value": "L’utente può decidere se accettare o meno i cookie anche utilizzando le impostazioni del proprio browser. La disabilitazione dei cookie “terze parti” non pregiudica in alcun modo la navigabilità. L’impostazione può essere definita in modo specifico per i diversi siti e applicazioni web. Inoltre i migliori browser consentono di definire impostazioni diverse per i cookie “proprietari” e per quelli di “terze parti”. A titolo di esempio, in Firefox, attraverso il menu Strumenti -> Opzioni -> Privacy, è possibile accedere ad un pannello di controllo dove è possibile definire se accettare o meno i diversi tipi di cookie e procedere alla loro rimozione."
+                },
+                {
+                    "type": "listItem",
+                    "value": "Chrome: https://support.google.com/chrome/answer/95647?hl=it"
+                },
+                {
+                    "type": "listItem",
+                    "value": "Firefox: https://support.mozilla.org/it/kb/Gestione%20dei%20cookie"
+                },
+                {
+                    "type": "listItem",
+                    "value": "Internet Explorer: http://windows.microsoft.com/it-it/windows7/howto-manage-cookies-in-internet-explorer-9"
+                },
+                {
+                    "type": "listItem",
+                    "value": "Opera: http://help.opera.com/Windows/10.00/it/cookies.html"
+                },
+                {
+                    "type": "listItem",
+                    "value": "Safari: http://support.apple.com/kb/HT1677?viewlocale=it_IT"
+                }
+            ]
+        },
+        "holder": {
+            "title": "Titolare del trattamento dei dati personali",
+            "content": [
+                {
+                    "type": "text",
+                    "value": "Titolare del trattamento è BCode SRL, con sede in Via Flumendosa 18, 20123 Milano (MI), info@bcode.cloud"
+                }
+            ]
+        }
+    }
+}

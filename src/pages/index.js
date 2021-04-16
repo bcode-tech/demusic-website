@@ -14,6 +14,8 @@ import CustomModal from "../components/customModal/CustomModal";
 import EmailSubscriptionModal from "../components/emailSubscriptionModal/EmailSubscriptionModal";
 import Voices from "../components/voices/Voices";
 import Seo from "../components/seo/Seo";
+import PrivacyPolicyModal from "../components/privacyPolicyModal/PrivacyPolicyModal";
+import CookiePolicyModal from "../components/cookiePolicyModal/CookiePolicyModal";
 
 import Logo from "../imports/assets/icons/logo.svg";
 import Menu from "../imports/assets/icons/menu.svg";
@@ -32,7 +34,7 @@ import testimonialThree from "../imports/assets/images/testimonial-three.png";
 import "../styles/index.scss";
 import "../styles/pages/home.scss";
 
-function App() {
+const App = () => {
     const { t, i18n } = useTranslation();
 
     const scrollContainerRef = useRef(null);
@@ -56,9 +58,21 @@ function App() {
     } = useDisclosure();
 
     const {
-        isOpen: isModalOpen,
-        onOpen: onModalOpen,
-        onClose: onModalClose,
+        isOpen: isEmailSubscriptionModalOpen,
+        onOpen: onEmailSubscriptionModalOpen,
+        onClose: onEmailSubscriptionModalClose,
+    } = useDisclosure();
+
+    const {
+        isOpen: isPrivacyPolicyModalOpen,
+        onOpen: onPrivacyPolicyModalOpen,
+        onClose: onPrivacyPolicyModalClose,
+    } = useDisclosure();
+
+    const {
+        isOpen: isCookiePolicyModalOpen,
+        onOpen: onCookiePolicyModalOpen,
+        onClose: onCookiePolicyModalClose,
     } = useDisclosure();
 
     const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
@@ -100,18 +114,22 @@ function App() {
 
     useEffect(() => {
         if (isDrawerOpen) {
-            if (isModalOpen) {
+            if (isEmailSubscriptionModalOpen) {
                 onDrawerClose();
             }
         }
-    }, [isDrawerOpen, isModalOpen, onDrawerClose]);
+    }, [isDrawerOpen, isEmailSubscriptionModalOpen, onDrawerClose]);
 
     return (
         <div className="page">
             <Seo
-                title={t('slogan_main')}
+                title={t("slogan_main")}
                 description={t("slogan_subtitle")}
-                image={{ src: '/favicon/favicon-96x96.png', width: 96, height: 96 }}
+                image={{
+                    src: "/favicon/favicon-96x96.png",
+                    width: 96,
+                    height: 96,
+                }}
             />
             <header
                 id="header"
@@ -134,7 +152,11 @@ function App() {
                     </>
                 ) : (
                     <div className="wrapper-voices">
-                        <Voices onModalOpen={onModalOpen} />
+                        <Voices
+                            onEmailSubscriptionModalOpen={
+                                onEmailSubscriptionModalOpen
+                            }
+                        />
                         <div className="container-language">
                             <Box
                                 className="display-language"
@@ -210,7 +232,9 @@ function App() {
                                 </h2>
                                 <Button
                                     className="button"
-                                    onClick={() => onModalOpen()}
+                                    onClick={() =>
+                                        onEmailSubscriptionModalOpen()
+                                    }
                                 >
                                     {t("find_out_more")}
                                 </Button>
@@ -269,7 +293,9 @@ function App() {
                                 </p>
                                 <Button
                                     className="button"
-                                    onClick={() => onModalOpen()}
+                                    onClick={() =>
+                                        onEmailSubscriptionModalOpen()
+                                    }
                                 >
                                     {t("find_out_more")}
                                 </Button>
@@ -291,7 +317,9 @@ function App() {
                                 </p>
                                 <Button
                                     className="button"
-                                    onClick={() => onModalOpen()}
+                                    onClick={() =>
+                                        onEmailSubscriptionModalOpen()
+                                    }
                                 >
                                     {t("find_out_more")}
                                 </Button>
@@ -375,7 +403,7 @@ function App() {
                         <p className="text">{t("why_us_content_part_two")}</p>
                         <Button
                             className="button"
-                            onClick={() => onModalOpen()}
+                            onClick={() => onEmailSubscriptionModalOpen()}
                         >
                             {t("find_out_more")}
                         </Button>
@@ -401,14 +429,20 @@ function App() {
                         <Logo className="logo" />
                         <ul className="list wrapper-terms reset-list">
                             <li className="list-item">
-                                <Link href="" className="link">
-                                    {t("terms_and_conditions")}
-                                </Link>
+                                <Button
+                                    className="link"
+                                    onClick={() => onPrivacyPolicyModalOpen()}
+                                >
+                                    {t("privacy_policy")}
+                                </Button>
                             </li>
                             <li className="list-item">
-                                <Link href="" className="link">
-                                    {t("privacy_policies")}
-                                </Link>
+                                <Button
+                                    className="link"
+                                    onClick={() => onCookiePolicyModalOpen()}
+                                >
+                                    {t("cookie_policy")}
+                                </Button>
                             </li>
                             <li className="list-item">
                                 <p className="text">Copyright © 2021 BCode</p>
@@ -436,24 +470,41 @@ function App() {
                 </footer>
                 {isDrawerOpen && responsiveState !== "desktop" && (
                     <CustomDrawer
-                        isOpen={isDrawerOpen}
                         onOpen={onDrawerOpen}
+                        isOpen={isDrawerOpen}
                         onClose={onDrawerClose}
                         btnRef={btnRef}
-                        onModalOpen={onModalOpen}
+                        onModalOpen={onEmailSubscriptionModalOpen}
                     />
                 )}
-                {isModalOpen && (
+                {isEmailSubscriptionModalOpen && (
                     <CustomModal
-                        isOpen={isModalOpen}
-                        onOpen={onModalOpen}
-                        onClose={onModalClose}
+                        isOpen={isEmailSubscriptionModalOpen}
+                        onClose={onEmailSubscriptionModalClose}
                     >
                         <EmailSubscriptionModal />
+                    </CustomModal>
+                )}
+                {isPrivacyPolicyModalOpen && (
+                    <CustomModal
+                        name="privacy-policy"
+                        isOpen={isPrivacyPolicyModalOpen}
+                        onClose={onPrivacyPolicyModalClose}
+                    >
+                        <PrivacyPolicyModal />
+                    </CustomModal>
+                )}
+                {isCookiePolicyModalOpen && (
+                    <CustomModal
+                        name="cookie-policy"
+                        isOpen={isCookiePolicyModalOpen}
+                        onClose={onCookiePolicyModalClose}
+                    >
+                        <CookiePolicyModal />
                     </CustomModal>
                 )}
             </SimpleBar>
         </div>
     );
-}
+};
 export default App;
