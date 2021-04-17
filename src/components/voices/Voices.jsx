@@ -8,27 +8,27 @@ const Voices = ({ onClose, onModalOpen }) => {
     return (
         <ul className="list reset-list">
             <li className="list-item">
-                <Link href="#who" className="link" onClick={() => onClose()}>
+                <Link href="#who" className="link" onClick={onClose}>
                     {t("who_we_are")}
                 </Link>
             </li>
             <li className="list-item">
-                <Link href="#what" className="link" onClick={() => onClose()}>
+                <Link href="#what" className="link" onClick={onClose}>
                     {t("what_is_demusic")}
                 </Link>
             </li>
             <li className="list-item">
-                <Link href="#perks" className="link" onClick={() => onClose()}>
+                <Link href="#perks" className="link" onClick={onClose}>
                     {t("perks")}
                 </Link>
             </li>
             <li className="list-item">
-                <Link href="#why" className="link" onClick={() => onClose()}>
+                <Link href="#why" className="link" onClick={onClose}>
                     {t("why")}
                 </Link>
             </li>
             <li className="list-item">
-                <Button className="button" onClick={() => onModalOpen()}>
+                <Button className="button" onClick={onModalOpen}>
                     {t("find_out_more")}
                 </Button>
             </li>
