@@ -30,6 +30,7 @@ const RenderTerms = ({ content, itemKey }) => {
                                 className="img"
                                 src={item.value}
                                 key={`item-${index}`}
+                                alt="img"
                             />
                         );
                     default:

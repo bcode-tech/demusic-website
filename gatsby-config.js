@@ -2,7 +2,8 @@ module.exports = {
     siteMetadata: {
         title: "DeMusic",
         siteUrl: "https://demusic.it",
-        description: "Live your passion for music in a completely revolutionary way, support your favorite artists in a transparent and verifiable way",
+        description:
+            "Live your passion for music in a completely revolutionary way, support your favorite artists in a transparent and verifiable way",
         author: "BCode Srl",
         keywords: ["music", "blockchain", "decentralization"],
     },
@@ -17,5 +18,7 @@ module.exports = {
                 },
             },
         },
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sharp`,
     ],
 };

@@ -71,12 +71,6 @@
                 .link {
                     visibility: hidden;
                 }
-
-                .img {
-                    display: block;
-                    width: 25em;
-                    // height: 35em;
-                }
             }
         }
     }
@@ -121,14 +115,6 @@
             .container-image {
                 .link {
                     visibility: hidden;
-                }
-
-                .img {
-                    margin: 0 auto;
-
-                    @include mq("m", "min") {
-                        margin: 0;
-                    }
                 }
             }
 
@@ -179,19 +165,6 @@
                     padding-left: 2em;
                 }
             }
-
-            .container-image {
-                .img {
-                    display: block;
-                    width: 20em;
-                    // height: 20em;
-
-                    @include mq("m", "min") {
-                        width: 25em;
-                        // height: 25em;
-                    }
-                }
-            }
         }
     }
 
@@ -213,12 +186,6 @@
                 @include mq("m", "min") {
                     display: flex;
                     align-items: flex-end;
-                }
-
-                .img {
-                    display: block;
-                    width: 18em;
-                    // height: 25em;
                 }
             }
         }

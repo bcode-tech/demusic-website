@@ -27,12 +27,14 @@ import Transparency from "../imports/assets/icons/transparency.svg";
 import Facebook from "../imports/assets/icons/facebook.svg";
 import Twitter from "../imports/assets/icons/twitter.svg";
 
-import testimonial from "../imports/assets/images/testimonial.png";
-import testimonialTwo from "../imports/assets/images/testimonial-two.png";
-import testimonialThree from "../imports/assets/images/testimonial-three.png";
+import { StaticImage } from "gatsby-plugin-image";
 
 import "../styles/index.scss";
 import "../styles/pages/home.scss";
+
+const testimonial = "../imports/assets/images/testimonial.png";
+const testimonialTwo = "../imports/assets/images/testimonial-two.png";
+const testimonialThree = "../imports/assets/images/testimonial-three.png";
 
 const App = () => {
     const { t, i18n } = useTranslation();
@@ -250,10 +252,9 @@ const App = () => {
                                             - it.freepik.com
                                         </span>
                                     </a>
-                                    <img
+                                    <StaticImage
                                         src={testimonial}
-                                        alt="testimonial"
-                                        className="img"
+                                        alt="Young man that is listening to the music"
                                     />
                                 </div>
                             )}
@@ -266,20 +267,22 @@ const App = () => {
                         <h2 className="title">{t("who_we_are")}</h2>
                         <div className="container-content">
                             <div className="container-image">
-                                <a
+                                <Link
                                     href="https://it.freepik.com/foto/musica"
                                     className="link"
+                                    aria-label="Freepik"
                                 >
                                     <span className="text">
                                         Musica foto creata da cookie_studio -
                                         it.freepik.com
                                     </span>
-                                </a>
-                                <img
-                                    src={testimonialTwo}
-                                    alt="testimonial"
-                                    className="img"
-                                />
+                                </Link>
+                                <Box maxW="25em">
+                                    <StaticImage
+                                        src={testimonialTwo}
+                                        alt="A man and a girl"
+                                    />
+                                </Box>
                             </div>
                             <div className="container-text">
                                 <p className="text">
@@ -325,20 +328,22 @@ const App = () => {
                                 </Button>
                             </div>
                             <div className="container-image">
-                                <a
+                                <Link
                                     href="https://it.freepik.com/foto/musica"
                                     className="link"
+                                    aria-label="Freepik"
                                 >
                                     <span className="text">
                                         Musica foto creata da cookie_studio -
                                         it.freepik.com
                                     </span>
-                                </a>
-                                <img
-                                    src={testimonialThree}
-                                    alt="testimonial"
-                                    className="img"
-                                />
+                                </Link>
+                                <Box maxW="25em">
+                                    <StaticImage
+                                        src={testimonialThree}
+                                        alt="Young girl that is listening to the music"
+                                    />
+                                </Box>
                             </div>
                         </div>
                     </section>
@@ -450,20 +455,22 @@ const App = () => {
                         </ul>
                         <ul className="list wrapper-socials reset-list">
                             <li className="list-item">
-                                <a
+                                <Link
                                     href="https://www.facebook.com/BCodeBlockchain"
                                     className="link"
+                                    aria-label="Facebook"
                                 >
                                     <Facebook className="icon" />
-                                </a>
+                                </Link>
                             </li>
                             <li className="list-item">
-                                <a
+                                <Link
                                     href="https://www.linkedin.com/company/bcode-blockchain"
                                     className="link"
+                                    aria-label="Twitter"
                                 >
                                     <Twitter className="icon twitter" />
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
