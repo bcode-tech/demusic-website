@@ -154,11 +154,7 @@ const App = () => {
                     </>
                 ) : (
                     <div className="wrapper-voices">
-                        <Voices
-                            onEmailSubscriptionModalOpen={
-                                onEmailSubscriptionModalOpen
-                            }
-                        />
+                        <Voices onModalOpen={onEmailSubscriptionModalOpen} />
                         <div className="container-language">
                             <Box
                                 className="display-language"
