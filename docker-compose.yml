@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  demusic:
+    build: .
+    ports:
+      - "${PORT}:80"
